@@ -5,7 +5,7 @@ Create function calls before and after a function definition
 
 Code Example: 
 <pre>
-    var test = createCallback(function(a,b) { return a+b; });
+    var test = createCallbackBeforeAndAfter(function(a,b) { return a+b; });
     test(1, 2, function() { 
             return {
                 'before': function() { console.log('Initiating Callback!'); }, 
