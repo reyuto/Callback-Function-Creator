@@ -8,11 +8,11 @@ function createCallbackBeforeAndAfter(fn) {
         var callback = arguments[arguments.length - 1];
         var args = Array.prototype.slice.call(arguments, 0, arguments.length - 1);
         
-        callback.before();
+        callback.before && callback.before();
 
         var result = fn.apply(this, args);
 
-        callback.after(result);
+        callback.after && callback.after(result);
         return result;
     };
 }
