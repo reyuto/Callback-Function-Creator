@@ -12,6 +12,9 @@
 
 (function() {
 
+    /**
+     * @inner
+     */
     var isDeffered = false;
     var useStaticBefore = useStaticAfter = false;
     var staticBefore = statisAfter = "";
@@ -144,5 +147,16 @@
     }
 
     window.CFC_LIB = cfc;
+
+    /* 
+     * UTILITY FUNCTIONS
+     */
+    function set(obj, extensions) {
+        for (var extension in extensions) {
+            if (extensions.hasOwnProperty(extension)) {
+                obj[extension] = extensions;
+            }
+        }
+    }
 
 })();
